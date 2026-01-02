@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listeners Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            background: white;
+            width: 420px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            color: #1f2933;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 15px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1e40af;
+        }
+
+        .box {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            background: #e0f2fe;
+            font-weight: bold;
+            color: #0f172a;
+        }
+
+        input {
+            padding: 8px;
+            width: 80%;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>JavaScript Event Listeners</h2>
+
+    <button id="clickBtn">Click Me</button>
+
+    <div class="box" id="hoverBox">
+        Hover over this box 👆
+    </div>
+
+    <input type="text" id="keyInput" placeholder="Type something...">
+    <p id="keyResult"></p>
+</div>
+
+<script>
+    // CLICK EVENT
+    document.getElementById("clickBtn")
+        .addEventListener("click", function () {
+            alert("Button clicked using addEventListener() ✅");
+        });
+
+    // MOUSE EVENTS
+    let box = document.getElementById("hoverBox");
+
+    box.addEventListener("mouseenter", function () {
+        box.innerHTML = "Mouse Entered 🖱️";
+        box.style.backgroundColor = "#bbf7d0";
+    });
+
+    box.addEventListener("mouseleave", function () {
+        box.innerHTML = "Hover over this box 👆";
+        box.style.backgroundColor = "#e0f2fe";
+    });
+
+    // KEYBOARD EVENT
+    document.getElementById("keyInput")
+        .addEventListener("keydown", function (event) {
+            document.getElementById("keyResult").innerHTML =
+                "You pressed: " + event.key;
+        });
+</script>
+
+</body>
+</html>

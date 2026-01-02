@@ -1,0 +1,24 @@
+* {
+  font-family: Arial, sans-serif;
+}
+
+/* ID Selector */
+#main-heading {
+  color: darkblue;
+  text-align: center;
+}
+
+/* Class Selector */
+.info {
+  color: rgb(0, 0, 0);
+}
+
+/* Descendant Selector */
+.container p {
+  color: rgb(33, 18, 146);
+}
+
+/* Group Selector */
+h2, p {
+  margin-left: 20px;
+}

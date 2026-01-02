@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Real-Time Transport Dashboard</title>
+
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background:#eef3f8; }
+
+    .header {
+      background: linear-gradient(90deg, #5a3ff6, #8b5cf6);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .layout {
+      padding: 18px;
+    }
+
+    .sidebar,
+    .content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    h2, h3 {
+      margin-top: 0;
+      color:#4b4b4b;
+    }
+
+    /* 600–900px → FLOAT layout */
+    @media (min-width:600px) and (max-width:900px) {
+      .sidebar {
+        float: left;
+        width: 30%;
+      }
+      .content {
+        float: left;
+        width: 70%;
+      }
+      .layout::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+
+    /* >900px → FLEXBOX layout */
+    @media (min-width:900px) {
+      .layout {
+        display: flex;
+        gap: 18px;
+      }
+      .sidebar {
+        width: 260px;
+      }
+      .content {
+        flex: 1;
+      }
+    }
+  </style>
+
+</head>
+<body>
+
+  <header class="header">REAL-TIME TRANSPORT SYSTEM</header>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <h3>Sidebar</h3>
+      <p>Navigation / menu coming soon</p>
+    </aside>
+
+    <main class="content">
+      <h2>Real-Time Public Transport Tracking System</h2>
+      <p>
+        This system enables users to track buses and public transport vehicles
+        in real time, allowing accurate arrival predictions and improved travel
+        planning for passengers.
+      </p>
+
+      <h3>How It Works</h3>
+      <ul style="padding-left:20px;">
+        <li>GPS devices installed in public transport vehicles</li>
+        <li>Real-time location updates sent to central server</li>
+        <li>Users can view live bus movement on map</li>
+        <li>Expected arrival time dynamically calculated</li>
+        <li>Alerts generated for delays and route changes</li>
+      </ul>
+
+      <h3>Key Features</h3>
+      <ul style="padding-left:20px;">
+        <li>Live bus tracking on interactive map</li>
+        <li>ETA (Estimated Time of Arrival) for each stop</li>
+        <li>Route planning and stop-based search</li>
+        <li>Passenger notification system</li>
+        <li>Admin dashboard for fleet monitoring</li>
+      </ul>
+
+      <h3>Expected Impact</h3>
+      <p>
+        Reduced waiting time, improved public transport reliability, better
+        traffic flow management, and increased passenger satisfaction across
+        urban and rural areas.
+      </p>
+    </main>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation using JS Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .form-box {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(12px);
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        input, button {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        input {
+            outline: none;
+        }
+
+        button {
+            background: #00ffd5;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0ff;
+        }
+
+        .msg {
+            font-size: 14px;
+            color: #ffdf6c;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🔥 JS Form Validation 🔥</h1>
+
+<div class="form-box">
+    <form onsubmit="return validateForm()">
+        
+        <input type="text" id="name" placeholder="Enter your name"
+               oninput="checkName()">
+        <div class="msg" id="nameMsg"></div>
+
+        <input type="email" id="email" placeholder="Enter your email"
+               oninput="checkEmail()">
+        <div class="msg" id="emailMsg"></div>
+
+        <input type="password" id="password" placeholder="Enter password"
+               oninput="checkPassword()">
+        <div class="msg" id="passMsg"></div>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    // oninput validation
+    function checkName() {
+        let name = document.getElementById("name").value;
+        document.getElementById("nameMsg").innerHTML =
+            name.length < 3 ? "Name must be at least 3 characters" : "";
+    }
+
+    function checkEmail() {
+        let email = document.getElementById("email").value;
+        document.getElementById("emailMsg").innerHTML =
+            email.includes("@") ? "" : "Invalid email format";
+    }
+
+    function checkPassword() {
+        let pass = document.getElementById("password").value;
+        document.getElementById("passMsg").innerHTML =
+            pass.length < 6 ? "Password must be 6+ characters" : "";
+    }
+
+    // onsubmit validation
+    function validateForm() {
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let pass = document.getElementById("password").value;
+
+        if (name === "" || email === "" || pass === "") {
+            alert("All fields are mandatory ❌");
+            return false;
+        }
+
+        alert("Form submitted successfully ✅");
+        return true;
+    }
+</script>
+
+</body>
+</html>

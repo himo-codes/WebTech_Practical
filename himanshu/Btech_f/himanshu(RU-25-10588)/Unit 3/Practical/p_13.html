@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Defined Functions & Scope</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1d2671, #c33764);
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            width: 400px;
+            margin: 20px auto;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        input, button {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        button {
+            background: #00ffd5;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0ff;
+        }
+
+        p {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>🔥 User Defined Functions & Scope 🔥</h1>
+
+<div class="card">
+    <h3>Enter Two Numbers</h3>
+    <input type="number" id="num1" placeholder="First number">
+    <input type="number" id="num2" placeholder="Second number">
+    <button onclick="calculateSum()">Calculate Sum</button>
+    <p id="result"></p>
+</div>
+
+<script>
+    // USER DEFINED FUNCTION
+    function calculateSum() {
+
+        // var → function scoped
+        var a = parseInt(document.getElementById("num1").value);
+
+        // let → block scoped
+        let b = parseInt(document.getElementById("num2").value);
+
+        // const → fixed value
+        const message = "The sum is: ";
+
+        let sum = a + b;
+
+        document.getElementById("result").innerHTML = message + sum;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.box {
+  background-image: url('https://picsum.photos/300/200');
+  background-size: cover;
+  margin: 40px auto;
+  border: 5px solid #333;
+  padding: 20px;
+  width: 300px;
+  color: white;
+  border-radius: 10px;
+}

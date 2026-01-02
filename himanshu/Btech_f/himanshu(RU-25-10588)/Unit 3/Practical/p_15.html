@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+            text-align: center;
+            padding: 50px;
+        }
+
+        .box {
+            background: white;
+            width: 380px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background: #ff6f91;
+            color: white;
+        }
+
+        button:hover {
+            background: #ff9671;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>🌸 DOM Manipulation Demo 🌸</h2>
+
+<div class="box">
+    <p id="text">Hello! Guyss</p>
+    <p class="emoji">🌼</p>
+
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="changeEmoji()">Change Emoji</button>
+</div>
+
+<script>
+    // Using getElementById()
+    function changeText() {
+        document.getElementById("text").innerHTML =
+            "Text changed using getElementById() 💖";
+    }
+
+    // Using querySelector()
+    function changeEmoji() {
+        document.querySelector(".emoji").innerHTML =
+            "✨🌈✨";
+    }
+</script>
+
+</body>
+</html>

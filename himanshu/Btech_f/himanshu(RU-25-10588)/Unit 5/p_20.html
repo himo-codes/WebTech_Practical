@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Himanshu Sharma — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="avatar-wrap">
+          <img id="profileImage" class="avatar-img" src="himmo.jpeg" alt="Himanshu Sharma">
+        </div>
+        <div>
+          <h1>Himanshu Sharma</h1>
+          <p class="muted">B.Tech (AI) student — Rungta International Skills University</p>
+          <p class="role">Video Editor • AI Enthusiast</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="cta">Connect</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="pop-target">
+          <h2 class="pop-in">Hello — I'm <span class="accent">Himanshu</span></h2>
+          <p class="lead pop-in">A focused B.Tech AI student building practical web and programming skills. I combine curiosity with disciplined engineering to create clean, user-friendly interfaces and reliable code. I also work as a video editor creating compelling visual stories.</p>
+          <div class="actions">
+            <a href="#projects" class="btn">See Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Quick Info</h3>
+          <ul class="quick-list">
+            <li><strong>Degree:</strong> B.Tech (AI)</li>
+            <li><strong>University:</strong> Rungta International Skills University</li>
+            <li><strong>Email:</strong> <a href="mailto:himo2429@gmail.com">himo2429@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container about">
+      <h2>About Me</h2>
+      <p class="about-text">I am Himanshu Sharma, a B.Tech student specializing in Artificial Intelligence. I enjoy translating ideas into polished digital experiences and learning the foundations of intelligent systems. I work with front-end technologies and core programming languages to build simple, maintainable solutions. Outside code, I like reading about machine learning trends and experimenting with small projects that connect AI concepts to real-world problems.</p>
+    </section>
+
+    <section id="skills" class="container skills">
+      <h2>Skills</h2>
+      <div class="skill-grid">
+        <div class="skill pop-in">🔥 HTML</div>
+        <div class="skill pop-in">🎨 CSS</div>
+        <div class="skill pop-in">⚡ JavaScript</div>
+        <div class="skill pop-in">🧠 C Language</div>
+        <div class="skill pop-in">🐍 Python</div>
+        <div class="skill pop-in">🎬 Video Editing</div>
+      </div>
+    </section>
+
+    <section id="projects" class="container projects">
+      <h2>Projects</h2>
+      <p class="muted">Selected projects and coursework will appear here. Want to see something specific? Get in touch.</p>
+      <div class="project-grid">
+        <article class="project-card">
+          <h3>Portfolio Website</h3>
+          <p class="muted">This responsive portfolio built with HTML, CSS and a touch of JS. Clean design and accessible structure.</p>
+        </article>
+        <article class="project-card">
+          <h3>AI Coursework</h3>
+          <p class="muted">Experiments with machine learning models and practical assignments from the AI curriculum.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="container contact">
+      <h2>Connect</h2>
+      <p class="muted">I'd love to hear about collaboration or opportunities. Submit your email below and I'll get back to you — or click the mail button to message me now.</p>
+
+      <form id="connectForm" class="connect-form">
+        <label>
+          Your email
+          <input id="visitorEmail" type="email" placeholder="you@example.com" required>
+        </label>
+        <label>
+          Message (optional)
+          <input id="visitorMessage" type="text" placeholder="Short message">
+        </label>
+        <div class="contact-row">
+          <button type="submit" class="btn">Send Connect Request</button>
+          <a href="mailto:himo2429@gmail.com" class="btn btn-outline">Email: himo2429@gmail.com</a>
+        </div>
+      </form>
+
+      <div class="contact-row" style="margin-top:1rem">
+        <button id="copyEmail" class="btn btn-outline">Copy My Email</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="muted">© <span id="year"></span> Himanshu Sharma — Built with care.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me - Form Layout</title>
+</head>
+<body>
+
+<h1>About Me: Himanshu Sharma</h1>
+<p>This page demonstrates form elements, input fields, radio buttons, checkboxes, select boxes, and text areas, all about <strong>me</strong>.</p>
+
+<hr>
+
+<form action="#" method="post">
+
+    <fieldset>
+        <legend><strong>Personal Details</strong></legend>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="text"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="text"><br><br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" checked> Male
+        <input type="radio" id="female" name="gender" value="female"> Female
+        <input type="radio" id="other" name="gender" value="other"> Other
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend><strong>Academic Information</strong></legend>
+
+        <label for="course">Course:</label>
+        <select id="course" name="course">
+            <option value="btech" selected>B.Tech (Ds)</option>
+            <option value="bca">BCA</option>
+            <option value="mtech">M.Tech</option>
+        </select><br><br>
+
+        <label>Skills:</label><br>
+        <input type="checkbox" name="skill" value="html" checked> HTML<br>
+        <input type="checkbox" name="skill" value="css" checked> CSS<br>
+        <input type="checkbox" name="skill" value="python" checked> Python<br>
+        <input type="checkbox" name="skill" value="ml"> Figma <br>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend><strong>Feedback</strong></legend>
+
+        <label for="message">Write something about yourself:</label><br>
+        <textarea id="message" name="message" rows="5" cols="40">I am Himanshu Sharma, a B.Tech student interested in Data science and Web Development.</textarea>
+    </fieldset>
+
+    <br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+
+</form>
+
+<hr>
+
+<p>This form collects basic personal and academic details along with user feedback about <strong>Hiamnshu Sharma</strong>.</p>
+
+</body>
+</html>

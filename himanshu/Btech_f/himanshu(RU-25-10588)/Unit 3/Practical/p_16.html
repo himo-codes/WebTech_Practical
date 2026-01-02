@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show & Hide Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            background: white;
+            width: 420px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 15px 0;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1e40af;
+        }
+
+        .box {
+            margin-top: 20px;
+            padding: 20px;
+            background: #e0f2fe;
+            border-radius: 8px;
+            color: #0f172a;
+            font-weight: bold;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .highlight {
+            background: #bbf7d0;
+            color: #065f46;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Show / Hide Using JavaScript</h2>
+
+    <button onclick="toggleBox()">Toggle Box</button>
+
+    <div id="infoBox" class="box">
+        This content is controlled using JavaScript 🚀
+    </div>
+
+    <button onclick="highlightBox()">Toggle Highlight</button>
+</div>
+
+<script>
+    function toggleBox() {
+        document.getElementById("infoBox").classList.toggle("hidden");
+    }
+
+    function highlightBox() {
+        document.getElementById("infoBox").classList.toggle("highlight");
+    }
+</script>
+
+</body>
+</html>

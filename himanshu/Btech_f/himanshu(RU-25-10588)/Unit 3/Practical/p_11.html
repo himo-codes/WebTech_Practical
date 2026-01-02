@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Arithmetic Operations</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding-top: 50px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JavaScript Arithmetic Operations</h2>
+
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <br><br>
+
+    <button onclick="add()">Add</button>
+    <button onclick="subtract()">Subtract</button>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+
+    <h3 id="result">Result: </h3>
+
+    <script>
+        function add() {
+            let a = parseFloat(document.getElementById("num1").value);
+            let b = parseFloat(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result: " + (a + b);
+        }
+
+        function subtract() {
+            let a = parseFloat(document.getElementById("num1").value);
+            let b = parseFloat(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result: " + (a - b);
+        }
+
+        function multiply() {
+            let a = parseFloat(document.getElementById("num1").value);
+            let b = parseFloat(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = "Result: " + (a * b);
+        }
+
+        function divide() {
+            let a = parseFloat(document.getElementById("num1").value);
+            let b = parseFloat(document.getElementById("num2").value);
+            if (b === 0) {
+                document.getElementById("result").innerHTML = "Result: Cannot divide by zero";
+            } else {
+                document.getElementById("result").innerHTML = "Result: " + (a / b);
+            }
+        }
+    </script>
+
+</body>
+</html>
