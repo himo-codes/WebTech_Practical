@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flip Clock</title>
+<style>
+body{
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial;
+    color:white;
+}
+
+.container{text-align:center;}
+
+.clock{
+    display:flex;
+    gap:10px;
+}
+
+.card{
+    width:90px;
+    height:130px;
+    background:black;
+    font-size:70px;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:8px;
+    position:relative;
+    overflow:hidden;
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:2px;
+    background:#333;
+    top:50%;
+}
+
+.flip{
+    animation:flip 0.5s;
+}
+
+@keyframes flip{
+    0%{transform:rotateX(0deg);}
+    100%{transform:rotateX(-360deg);}
+}
+
+.date{
+    margin-top:15px;
+    font-size:18px;
+    letter-spacing:2px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+    <div class="clock" id="clock"></div>
+    <div class="date" id="date"></div>
+</div>
+
+<script>
+const clock = document.getElementById("clock");
+const dateBox = document.getElementById("date");
+
+// create 6 cards
+for(let i=0;i<6;i++){
+    let c=document.createElement("div");
+    c.className="card";
+    c.textContent="0";
+    clock.appendChild(c);
+}
+
+function update(){
+    let now=new Date();
+    let time=now.toLocaleTimeString("en-GB",{hour12:false}).replace(/:/g,"");
+    let cards=document.querySelectorAll(".card");
+
+    time.split("").forEach((num,i)=>{
+        if(cards[i].textContent!==num){
+            cards[i].classList.remove("flip");
+            void cards[i].offsetWidth;
+            cards[i].classList.add("flip");
+            cards[i].textContent=num;
+        }
+    });
+
+    dateBox.textContent=now.toDateString();
+}
+
+setInterval(update,1000);
+update();
+</script>
+</body>
+</html>
